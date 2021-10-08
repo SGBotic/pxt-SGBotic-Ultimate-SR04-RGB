@@ -1,0 +1,19 @@
+{
+    "name": "pxt-SGBotic-Ultimate-SR04-RGB",
+    "version": "1.0",
+    "description": "Makdecode block for SGBotic Ultimate SR04 RGB Ultrasonic Sensor",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "base.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
