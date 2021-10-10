@@ -45,7 +45,7 @@ namespace sgbotic {
         buf2[1] = power;
 
         pins.i2cWriteBuffer(i2cAddr, buf2);
-        basic.pause(10)
+        //basic.pause(10)
     }
 
     /**
@@ -58,15 +58,15 @@ namespace sgbotic {
 
         buf2[0] = redRegister;
         pins.i2cWriteBuffer(i2cAddr, buf2);
-        basic.pause(1)
+        basic.pause(10)
 
         buf2[0] = greenRegister;
         pins.i2cWriteBuffer(i2cAddr, buf2);
-        basic.pause(1)
+        basic.pause(10)
 
         buf2[0] = blueRegister;
         pins.i2cWriteBuffer(i2cAddr, buf2);
-        basic.pause(1)
+        basic.pause(10)
     }
 
     /**
@@ -79,7 +79,7 @@ namespace sgbotic {
         buf2[1] = triggerCmd;
 
         pins.i2cWriteBuffer(i2cAddr, buf2);
-        basic.pause(1)
+        //basic.pause(1)
     }
 
     /**
@@ -96,9 +96,9 @@ namespace sgbotic {
         return (cm)
     }
 
-     /**
-       * Read the measured distance in micro-seconds
-       */
+    /**
+      * Read the measured distance in micro-seconds
+      */
     export function fnReadus(i2cAddr: number): number {
         let us: number;
 
@@ -156,6 +156,7 @@ namespace sgbotic {
     //% weight=95 blockGap=20 color=3CB371
     export function colorLightIntensity(color: LedEnum, power: number) {
         fnRGB(color, power, i2cAddr);
+        basic.pause(10);
     }
 
 
@@ -167,7 +168,8 @@ namespace sgbotic {
     //% blockId="trigger" block="start measurement"
     //% weight=92 blockGap=20 color=3CB371
     export function trigger() {
-        fnTrigger(i2cAddr)
+        fnTrigger(i2cAddr);
+        basic.pause(10);
     }
 
 
@@ -180,8 +182,9 @@ namespace sgbotic {
     //% blockId="readcm" block="cm"
     //% weight=90 blockGap=20 color=3CB371
     export function readcm(): number {
-
-        return (fnReadCm(i2cAddr))
+        let cm: number = fnReadCm(i2cAddr);
+        basic.pause(10);
+        return (cm)
     }
 
     /**
@@ -192,8 +195,9 @@ namespace sgbotic {
     //% blockId="readUs" block="uS"
     //% weight=88 blockGap=20 color=3CB371
     export function readUs(): number {
-
-        return (fnReadus(i2cAddr))
+        let us: number = fnReadus(i2cAddr);
+        basic.pause(10);
+        return (us)
     }
 
 
@@ -206,8 +210,9 @@ namespace sgbotic {
     //% blockId="readVersion" block="version"
     //% weight=86 blockGap=40 color=#3CB371
     export function readVersion(): number {
-
-        return (fnVersion(i2cAddr))
+        let ver_value: number = fnVersion(i2cAddr);
+        basic.pause(10);
+        return (ver_value)
     }
 
     /**
@@ -236,6 +241,7 @@ namespace sgbotic {
     //% weight=68 blockGap=20 color=73A16C
     export function colorLightIntensityMultiSr04(color: LedEnum, power: number, addr: number) {
         fnRGB(color, power, addr);
+        basic.pause(10);
     }
 
 
@@ -250,12 +256,13 @@ namespace sgbotic {
     //% weight=66 blockGap=20 color=73A16C
     export function triggerMultiSr04(addr: number) {
         fnTrigger(addr)
+        basic.pause(10);
     }
 
 
 
     /**
-     * Read sensor in cm of specified sensor
+     * Read sensor in  of specified sensor
      */
     //% subcategory=SR04-RGB
     //% group="multiple SR04"
@@ -264,8 +271,9 @@ namespace sgbotic {
     //% addr.min=0x08 addr.max=0x71
     //% weight=64 blockGap=20 color=73A16C
     export function readCmMultiSr04(addr: number): number {
-
-        return (fnReadCm(addr))
+        let cm: number = fnReadCm(addr);
+        basic.pause(10);
+        return (cm)
     }
 
     /**
@@ -278,7 +286,8 @@ namespace sgbotic {
     //% addr.min=0x08 addr.max=0x71
     //% weight=62 blockGap=20 color=73A16C
     export function readUsMultiSr04(addr: number): number {
-
+        let us: number = fnReadus(addr);
+        basic.pause(10);
         return (fnReadus(addr))
     }
 
@@ -293,8 +302,9 @@ namespace sgbotic {
     //% addr.min=0x08 addr.max=0x71
     //% weight=60 blockGap=40 color=#73A16C
     export function readVersionMultiSr04(addr: number): number {
-
-        return (fnVersion(addr))
+        let ver_value: number = fnVersion(addr)
+        basic.pause(10);
+        return (ver_value)
     }
 
     /**
@@ -316,6 +326,6 @@ namespace sgbotic {
         buf2[1] = newI2CAddr;
 
         pins.i2cWriteBuffer(oldAddr, buf2);
-        basic.pause(1)
+        basic.pause(10)
     }
 }
