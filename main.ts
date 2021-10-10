@@ -125,7 +125,7 @@ namespace sgbotic {
    * set the I2C address of SR04 RGB
    */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="initialize" block="initialize SR04 RGB addr%addr"
     //% addr.defl=0x60
     //% addr.min=0x08 addr.max=0x71
@@ -138,7 +138,7 @@ namespace sgbotic {
    * switch off all leds
    */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="offAllLeds" block="off all led"
     //% weight=97 blockGap=20 color=3CB371
     export function offAllLeds() {
@@ -149,7 +149,7 @@ namespace sgbotic {
     * set RGB color and light intensity
     */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="colorLightIntensity" block="led%color|power %power"
     //% power.defl=125
     //% power.min=0 power.max=255
@@ -164,7 +164,7 @@ namespace sgbotic {
     * start measurement
     */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="trigger" block="start measurement"
     //% weight=92 blockGap=20 color=3CB371
     export function trigger() {
@@ -178,7 +178,7 @@ namespace sgbotic {
      * Read sensor in cm.
      */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="readcm" block="cm"
     //% weight=90 blockGap=20 color=3CB371
     export function readcm(): number {
@@ -191,7 +191,7 @@ namespace sgbotic {
      * Read sensor in micro-second.
      */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="readUs" block="uS"
     //% weight=88 blockGap=20 color=3CB371
     export function readUs(): number {
@@ -206,7 +206,7 @@ namespace sgbotic {
      * Read firmware version.
      */
     //% subcategory=SR04-RGB
-    //% group="single SR04"
+    //% group="single SR04-RGB"
     //% blockId="readVersion" block="version"
     //% weight=86 blockGap=40 color=#3CB371
     export function readVersion(): number {
@@ -219,7 +219,7 @@ namespace sgbotic {
        * switch off all leds
        */
     //% subcategory=SR04-RGB
-    //% group="multiple SR04"
+    //% group="multiple SR04-RGB"
     //% blockId="offAllLedMultiSr04" block="off all led addr%addr"
     //% addr.defl=0x60
     //% addr.min=0x08 addr.max=0x71
@@ -232,7 +232,7 @@ namespace sgbotic {
     * set RGB color and light intensity of specified sensor
     */
     //% subcategory=SR04-RGB
-    //% group="multiple SR04"
+    //% group="multiple SR04-RGB"
     //% blockId="colorLightIntensityMultiSr04" block="led%color |power %power addr%addr"
     //% power.defl=125
     //% power.min=0 power.max=255
@@ -249,7 +249,7 @@ namespace sgbotic {
         * start measurement of specified sensor
         */
     //% subcategory=SR04-RGB
-    //% group="multiple SR04"
+    //% group="multiple SR04-RGB"
     //% blockId="triggerMultiSr04" block="start measurement addr%addr"
     //% addr.defl=0x60
     //% addr.min=0x08 addr.max=0x71
@@ -265,7 +265,7 @@ namespace sgbotic {
      * Read sensor in  of specified sensor
      */
     //% subcategory=SR04-RGB
-    //% group="multiple SR04"
+    //% group="multiple SR04-RGB"
     //% blockId="readCmMultiSr04" block="cm addr%addr"
     //% addr.defl=0x60
     //% addr.min=0x08 addr.max=0x71
@@ -280,7 +280,7 @@ namespace sgbotic {
      * Read sensor in micro-second of specified sensor
      */
     //% subcategory=SR04-RGB
-    //% group="multiple SR04"
+    //% group="multiple SR04-RGB"
     //% blockId="readUsMultiSr04" block="uS addr%addr"
     //% addr.defl=0x60
     //% addr.min=0x08 addr.max=0x71
@@ -296,7 +296,7 @@ namespace sgbotic {
      * Read firmware version of specified sensor
      */
     //% subcategory=SR04-RGB
-    //% group="multiple SR04"
+    //% group="multiple SR04-RGB"
     //% blockId="readVersionMultiSr04" block="version addr%addr"
     //% addr.defl=0x60
     //% addr.min=0x08 addr.max=0x71
