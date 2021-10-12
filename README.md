@@ -2,6 +2,11 @@
 
 Makecode extensions for [Ultimate SR04 RGB Ultrasonic Sensor](https://www.sgbotic.com/index.php?dispatch=products.view&product_id=3248), an I2C ultrasonic sensor with illuminate transceiver.
 
+Additional inforamtion:
+* [User guide](https://www.sgbotic.com/index.php?dispatch=pages.view&page_id=54)
+* [Microbit makecode tutorial](https://www.sgbotic.com/index.php?dispatch=pages.view&page_id=56)
+* [Microbit microPython examples code](https://github.com/SGBotic/Microbit-microPython-Examples-for-Ultimate-SR04-RGB)
+
 ## Single sensor
 
 * Initialize SR04 RGB
